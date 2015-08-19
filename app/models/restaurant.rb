@@ -1,10 +1,8 @@
 class Restaurant < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
 
-  categories_m = %w(chinese italian japanese french belgian thai)
-  categories = %w()
-  CATEGORIES = categories_m.map do |c|
-    categories << c
+  categories = %w(chinese italian japanese french belgian thai)
+  CATEGORIES = categories.map do |c|
     c.capitalize
   end
   CATEGORIES.map { |c| categories << c }
