@@ -10,9 +10,9 @@
           <p><%= restaurant.phone_number %></p>
           <p><%= restaurant.category.capitalize %> food</p>
           <p>
-            (<%= link_to "Reviews", restaurant_path(restaurant) %>,
-            <%= link_to "edit", edit_restaurant_path(restaurant) %>,
-            <%= link_to "delete", restaurant_path(restaurant), method: :delete %>)
+            <%= link_to restaurant_path(restaurant) do %><i class="fa fa-star"></i><% end %> -
+            <%= link_to edit_restaurant_path(restaurant) do %><i class="fa fa-pencil-square-o"></i><% end %> -
+            <%= link_to restaurant_path(restaurant), method: :delete do %><i class="fa fa-trash-o"></i><% end %>
           </p>
         </div>
       <% end %>
