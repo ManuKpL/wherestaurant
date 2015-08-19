@@ -1,5 +1,7 @@
 <div class="container text-center card">
   <h1><%= @restaurant.name %></h1>
+  <div class="card-bg" style="background-image: url(<%= @restaurant.picture %>)"></div>
+  <br>
   <%= link_to "Back to list", restaurants_path, class: "btn btn-primary" %>
   <hr>
   <div class="row">

@@ -1,23 +1,23 @@
-<div class="text-center">
+<div class="text-center card container">
   <h1>All the restaurants we reviewed</h1>
   <hr>
-  <div class="container">
     <div class="row">
       <% @restaurants.each do |restaurant| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <h3><%= restaurant.name %></h3>
-          <p><%= restaurant.address %></p>
-          <p><%= restaurant.phone_number %></p>
-          <p><%= restaurant.category.capitalize %> food</p>
-          <p>
-            <%= link_to restaurant_path(restaurant) do %><i class="fa fa-star"></i><% end %> -
-            <%= link_to edit_restaurant_path(restaurant) do %><i class="fa fa-pencil-square-o"></i><% end %> -
-            <%= link_to restaurant_path(restaurant), method: :delete do %><i class="fa fa-trash-o"></i><% end %>
-          </p>
+          <div class="card card-index" style="background-image: url(<%= restaurant.picture %>)">
+            <h3><%= restaurant.name %></h3>
+            <p><%= restaurant.address %></p>
+            <p><%= restaurant.phone_number %></p>
+            <p><%= restaurant.category.capitalize %> food</p>
+            <p>
+              <%= link_to restaurant_path(restaurant) do %><i class="fa fa-star"></i><% end %> -
+              <%= link_to edit_restaurant_path(restaurant) do %><i class="fa fa-pencil-square-o"></i><% end %> -
+              <%= link_to restaurant_path(restaurant), method: :delete do %><i class="fa fa-trash-o"></i><% end %>
+            </p>
+          </div>
         </div>
       <% end %>
     </div>
-  </div>
   <hr>
   <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-success" %>
 </div>
