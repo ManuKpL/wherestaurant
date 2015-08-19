@@ -11,9 +11,29 @@
           <p><%= @restaurant.phone_number %></p>
           <p><%= @restaurant.category.capitalize %> food</p>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <h3>Reviews about the restaurant</h3>
-        </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div class="text-center">
+            <h3>Reviews about the restaurant</h3>
+            <p>
+              <%= @restaurant.reviews.length %> reviews
+            </p>
+            <hr>
+            <%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-success" %>
+            <hr>
+            <% @restaurant.reviews.each do |reviews| %>
+              <div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <p><%= reviews.content %><p>
+                  <p>Rating: <%= reviews.rating %>/5</p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
