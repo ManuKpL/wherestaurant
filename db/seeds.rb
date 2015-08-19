@@ -10,19 +10,25 @@
 restaurants = [
   {
     name: "La bonne poire",
-    address: "5 rue de la jetée verte",
+    address: "5 rue de la jetée verte 75 001 Paris",
     phone_number: "+33 1 45 25 65 14",
     category: "french"
   },
     {
     name: "Le temps des cerises",
-    address: "28 rue de la butte aux cailles",
+    address: "28 rue de la butte aux cailles 75 013 Paris",
     phone_number: "+33 1 64 89 25 16",
     category: "french"
   },
     {
     name: "La butte au Thai",
-    address: "35 rues des cinq diamants",
+    address: "35 rues des cinq diamants 75 013 Paris",
+    phone_number: "+33 9 14 25 89 45",
+    category: "thai"
+  },
+  {
+    name: "Pizza Pinaut",
+    address: "18 grande rue 17 670 La Couarde sur mer",
     phone_number: "+33 9 14 25 89 45",
     category: "thai"
   }
